@@ -93,11 +93,14 @@
 			// 
 			// txtPlayerName
 			// 
+			this.txtPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPlayerName.ForeColor = System.Drawing.Color.Green;
 			this.txtPlayerName.Location = new System.Drawing.Point(120, 48);
 			this.txtPlayerName.Name = "txtPlayerName";
 			this.txtPlayerName.ReadOnly = true;
 			this.txtPlayerName.Size = new System.Drawing.Size(120, 26);
 			this.txtPlayerName.TabIndex = 4;
+			this.txtPlayerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label3
 			// 
@@ -213,6 +216,8 @@
 			// 
 			// txtLevel
 			// 
+			this.txtLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLevel.ForeColor = System.Drawing.Color.Green;
 			this.txtLevel.Location = new System.Drawing.Point(372, 48);
 			this.txtLevel.Name = "txtLevel";
 			this.txtLevel.ReadOnly = true;
