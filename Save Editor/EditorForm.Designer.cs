@@ -40,6 +40,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.txtLevel = new System.Windows.Forms.TextBox();
 			this.cbBackup = new System.Windows.Forms.CheckBox();
+			this.lblStatus = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.nudAttributes)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudSkills)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMoney)).BeginInit();
@@ -181,7 +182,7 @@
 			// 
 			this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnSave.Enabled = false;
-			this.btnSave.Location = new System.Drawing.Point(496, 184);
+			this.btnSave.Location = new System.Drawing.Point(496, 194);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(75, 34);
 			this.btnSave.TabIndex = 11;
@@ -193,7 +194,7 @@
 			// 
 			this.btnUndo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnUndo.Enabled = false;
-			this.btnUndo.Location = new System.Drawing.Point(415, 184);
+			this.btnUndo.Location = new System.Drawing.Point(415, 194);
 			this.btnUndo.Name = "btnUndo";
 			this.btnUndo.Size = new System.Drawing.Size(75, 34);
 			this.btnUndo.TabIndex = 12;
@@ -231,11 +232,22 @@
 			this.cbBackup.Text = "Backup Save File";
 			this.cbBackup.UseVisualStyleBackColor = true;
 			// 
+			// lblStatus
+			// 
+			this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lblStatus.AutoSize = true;
+			this.lblStatus.ForeColor = System.Drawing.Color.Blue;
+			this.lblStatus.Location = new System.Drawing.Point(12, 201);
+			this.lblStatus.Name = "lblStatus";
+			this.lblStatus.Size = new System.Drawing.Size(0, 20);
+			this.lblStatus.TabIndex = 16;
+			// 
 			// EditorForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(583, 230);
+			this.ClientSize = new System.Drawing.Size(583, 240);
+			this.Controls.Add(this.lblStatus);
 			this.Controls.Add(this.cbBackup);
 			this.Controls.Add(this.txtLevel);
 			this.Controls.Add(this.label6);
@@ -253,7 +265,9 @@
 			this.Controls.Add(this.txtSaveFile);
 			this.Controls.Add(this.label1);
 			this.MaximizeBox = false;
+			this.MaximumSize = new System.Drawing.Size(605, 296);
 			this.MinimizeBox = false;
+			this.MinimumSize = new System.Drawing.Size(605, 296);
 			this.Name = "EditorForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Titan Quest Save Editor";
@@ -284,6 +298,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox txtLevel;
 		private System.Windows.Forms.CheckBox cbBackup;
+		private System.Windows.Forms.Label lblStatus;
 	}
 }
 

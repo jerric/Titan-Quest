@@ -19,6 +19,9 @@ namespace Lliira.TitanQuest.SaveEditor {
 			byte[] bytes = File.ReadAllBytes(filename);
 
 			Player player = new Player();
+			player.Length = new FileInfo(filename).Length;
+			player.ModifiedTime = File.GetLastWriteTime(filename);
+
 			player.NameOffset = FindOffset(bytes, PLAYER_NAME_TAG);
 			player.Name = ReadString(bytes, player.NameOffset);
 			player.LevelOffset = FindOffset(bytes, PLAYER_LEVEL_TAG);

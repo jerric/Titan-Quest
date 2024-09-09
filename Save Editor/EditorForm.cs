@@ -28,6 +28,7 @@ namespace Lliira.TitanQuest.SaveEditor {
 			SaveFileReader reader = new SaveFileReader();
 			player = reader.Read(saveFile);
 			ShowPlayer();
+			lblStatus.Text = "Save file opened.";
 		}
 
 		private void btnSave_Click(object sender, EventArgs e) {
@@ -35,13 +36,18 @@ namespace Lliira.TitanQuest.SaveEditor {
 			player.Attributes = (int)nudAttributes.Value;
 			player.Skills = (int)nudSkills.Value;
 			SaveFileWriter writer = new SaveFileWriter();
-			writer.Write(player, txtSaveFile.Text, cbBackup.Checked);
-			btnSave.Enabled = false;
-			btnUndo.Enabled = false;
+			if (writer.Write(player, txtSaveFile.Text, cbBackup.Checked)) {
+				btnSave.Enabled = false;
+				btnUndo.Enabled = false;
+				lblStatus.Text = "Changes saved.";
+			} else {
+				lblStatus.Text = "Saving failed, please re-open the save file.";
+			}
 		}
 
 		private void btnUndo_Click(object sender, EventArgs e) {
 			ShowPlayer();
+			lblStatus.Text = "Changes reverted.";
 		}
 
 		private void ShowPlayer() {
@@ -69,6 +75,7 @@ namespace Lliira.TitanQuest.SaveEditor {
 		private void ValueChanged() {
 			btnSave.Enabled = true;
 			btnUndo.Enabled = true;
+			lblStatus.Text = "There are unsaved changes.";
 		}
 	}
 }

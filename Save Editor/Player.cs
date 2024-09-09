@@ -12,6 +12,8 @@ namespace Lliira.TitanQuest.SaveEditor {
 		public int Attributes { get; internal set; }
 		public int Skills { get; internal set; }
 
+		internal long Length { get; set; }
+		internal DateTime ModifiedTime { get; set; }
 		internal int NameOffset { get; set; }
 		internal int LevelOffset { get; set; }
 		internal int MoneyOffset { get; set; }
